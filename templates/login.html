@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}login{% endblock %}
+{% block content %}
+<form action="{{url_for("processing")}}" method="post">
+	Enter name:<br>
+	<input type="text" name="nm" placeholder="Name" required><br>
+	Enter email<br>
+	<input type="email" name="em" placeholder="email" required><br>
+	Enter password<br>
+	<input type="password" name="ps" placeholder="password" required><br>
+	<br><input type="submit" value="Submit">
+</form>
+{% endblock %}
