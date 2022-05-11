@@ -1,13 +1,27 @@
 {% extends "base.html" %}
 {% block title %}login{% endblock %}
 {% block content %}
+<div class="container-fluid">
 <form action="{{url_for("processing")}}" method="post">
-	Enter name:<br>
-	<input type="text" name="nm" placeholder="Name" required><br>
-	Enter email<br>
-	<input type="email" name="em" placeholder="email" required><br>
-	Enter password<br>
-	<input type="password" name="ps" placeholder="password" required><br>
-	<br><input type="submit" value="Submit">
+<div class="row mb-3">
+<label for="inputName" class="col-sm-2 col-form-label">Enter name:</label>
+<div class="col-sm-10">
+<input type="text" class="form-control" name="nm" placeholder="Name" id="inputName" required>
+</div>
+</div>
+<div class="row mb-3">
+<label for="inputEmail" class="col-sm-2 col-form-label">Enter email:</label>
+<div class="col-sm-10">
+<input type="email" class="form-control" name="em" placeholder="email" id="inputEmail" required>
+</div>
+</div>
+<div class="row mb-3">
+<label for="inputPassword" class="col-sm-2 col-form-label">Enter password:</label>
+<div class="col-sm-10">
+<input type="password" class="form-control" name="ps" placeholder="password" id="inputPassword" required>
+</div>
+</div>
+<input class="btn btn-primary" type="submit" value="Submit">
 </form>
+</div>
 {% endblock %}
